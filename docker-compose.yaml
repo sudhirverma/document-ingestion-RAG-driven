@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://user:password@postgres/embeddings_db
+      - AWS_ACCESS_KEY_ID=""  # AWS credentials for Bedrock
+      - AWS_SECRET_ACCESS_KEY=""  # AWS credentials for Bedrock
+      - AWS_REGION=ap-south-1  # Region for AWS services like Bedrock
+    depends_on:
+      - postgres
+    network_mode: host
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: embeddings_db
+    ports:
+      - "5432:5432"

@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+asyncpg
+transformers
+langchain-community
+pydantic
+python-dotenv
+scikit-learn
+torch
+boto3  # AWS SDK for interacting with AWS Bedrock4
