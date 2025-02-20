@@ -58,8 +58,3 @@ This will provide details about the available endpoints and their usage.
 ## Troubleshooting
 If you encounter any issues, ensure the `.env` file is correctly set up and that Docker services are running.
 
-## License
-This project is licensed under the MIT License.
-
-# document-ingestion-RAG-driven
-# document-ingestion-RAG-driven
